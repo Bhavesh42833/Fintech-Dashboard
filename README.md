@@ -158,9 +158,3 @@ src/
 </p>
 
 ---
-
-If you want, I can also:
-
-* Add **badges (build, license, tech stack)**
-* Create a **GIF demo section (very impactful for recruiters)**
-* Or optimize this specifically for **resume / portfolio visibility**
