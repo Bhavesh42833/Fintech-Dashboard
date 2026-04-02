@@ -2,7 +2,7 @@
 
 ### Institutional Fintech Dashboard
 
-A modern, responsive fintech dashboard built with **React + Vite + Tailwind CSS + Redux Toolkit**, featuring secure authentication, role-based access control, and a powerful transaction analytics engine.
+A modern, responsive fintech dashboard built with **React + Vite + Tailwind CSS + Redux Toolkit**, featuring secure authentication, role-based access control, and a powerful transaction analytics engine built with **modular coding with added comments for increased legibility**.
 
 ---
 
