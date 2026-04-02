@@ -1,95 +1,166 @@
-# Aero Ledger 🚀💸
+# 🚀 Aero Ledger
 
-A cutting-edge, responsive institutional fintech dashboard engineered with React, Vite, Tailwind CSS (v3), and Redux. Aero Ledger features a fully dynamic Role-Based Access Control (RBAC) system, interactive transaction filtering mapped to CSV logic, and a dynamic Typewriter Authentication gateway perfectly scaled for both desktop and mobile viewports.
+### Institutional Fintech Dashboard
 
----
-
-## 🌟 Key Features
-
-* **Advanced Authentication Gateway:** 
-  * A full 2:3 ratio grid Hero Login Page featuring dynamic sweeping gradients.
-  * Javascript Typewriter effects iterating rotating brand statements.
-  * A Redux-bound profile selector dropdown that tracks the active user context across the app natively.
-* **Role-Based Access Control (RBAC):**
-  * Dashboard functionally protected against routing until securely authenticated (`isAuthenticated: true`).
-  * "Access Page" strictly locks modification commands (Add Member, Edit, Delete) behind `Admin` session boundaries securely evaluated via Redux.
-* **Transaction Tracking Engine:**
-  * Complex filtering layers tracking Search queries, strict range boundaries (e.g. `Income <= $X`), and transaction statuses.
-  * **Export to CSV:** Direct client-side `blob` creation securely extracting mapped transaction data into native Excel spreadsheets.
-* **Next-Gen Aesthetics:**
-  * Flawless Dark Mode context toggler that fluidly inverts chart grids, typography mapping, and dynamic bounding boxes.
-  * Advanced Glassmorphism and Backdrop-Blur styling using Stitch AI derived custom Tailwind themes.
-  * Fully Mobile-First fluid design architecture preventing horizontal clipping natively formatting tables correctly across devices.
+A modern, responsive fintech dashboard built with **React + Vite + Tailwind CSS + Redux Toolkit**, featuring secure authentication, role-based access control, and a powerful transaction analytics engine.
 
 ---
 
-## 📸 Visual Gallery
+## ✨ Overview
 
-### 1. Light Mode (Overview & Analytics)
-![Aero Overview Dashboard](./public/screenshots/overview.png)
+**Aero Ledger** is designed to simulate an institutional-grade financial dashboard with a strong focus on:
 
-### 2. Transaction Logging & Filtering
-![Transactions Data Engine](./public/screenshots/transactions.png)
-
-### 3. RBAC Access Control Modal
-![Aero Access Settings](./public/screenshots/access.png)
+* 🔐 Secure access control (RBAC)
+* 📊 Real-time transaction insights
+* 🎯 Clean, scalable UI/UX
+* ⚡ High-performance frontend architecture
 
 ---
 
-## 🛠️ Technology Stack
+## 🌟 Features
 
-* **Core:** React 18, Vite (HMR)
-* **Styling:** Tailwind CSS v3, CSS Vectors
-* **State Management:** Redux Toolkit (`userSlice`, `transactionsSlice`) bound via dynamic LocalStorage caching.
-* **Routing:** `react-router-dom` guarded effectively for auth barriers.
-* **Icons:** Google Material Symbols (Rounded)
+### 🔐 Authentication Experience
+
+* Elegant **Hero-based login UI** (2:3 grid layout)
+* Dynamic **typewriter animation** for brand messaging
+* Profile-based login system (Admin / Viewer)
+* Global auth state managed via **Redux**
 
 ---
 
-## 🚀 Getting Started
+### 🛡️ Role-Based Access Control (RBAC)
 
-### Prerequisites
-Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
+* Route-level protection using `react-router-dom`
+* Admin-only privileges:
 
-### Installation
+  * Add Member
+  * Edit Data
+  * Delete Records
+* Viewer mode ensures **read-only safety**
 
-1. **Clone the repository** (if fetched via source control) or extract the `.zip`.
+---
+
+### 📊 Transaction Engine
+
+* Advanced filtering system:
+
+  * 🔎 Search queries
+  * 💰 Income/Expense thresholds
+  * 📌 Status-based filters
+* 📤 **Export to CSV** (client-side Blob generation)
+* Clean tabular UI optimized for large datasets
+
+---
+
+### 🎨 UI & Design System
+
+* 🌙 Fully dynamic **Dark Mode**
+* ✨ Glassmorphism + backdrop blur effects
+* 📱 Mobile-first responsive layout
+* 🎯 No horizontal overflow issues across devices
+
+---
+
+## 📸 Screenshots
+
+### 🖥️ Dashboard Overview
+
+![Overview](./public/screenshots/overview.png)
+
+### 📊 Transactions Panel
+
+![Transactions](./public/screenshots/transactions.png)
+
+### 🔐 Access Control
+
+![Access](./public/screenshots/access.png)
+
+---
+
+## 🧱 Tech Stack
+
+| Category | Technology              |
+| -------- | ----------------------- |
+| Frontend | React 18, Vite          |
+| Styling  | Tailwind CSS v3         |
+| State    | Redux Toolkit           |
+| Routing  | react-router-dom        |
+| Icons    | Google Material Symbols |
+
+---
+
+## ⚙️ Getting Started
+
+### ✅ Prerequisites
+
+* Node.js (v16+ recommended)
+
+---
+
+### 📦 Installation
+
 ```bash
 git clone https://github.com/Bhavesh42833/Fintech-Dashboard.git
 cd Fintech-Dashboard
-```
-
-2. **Install the dependencies**:
-```bash
 npm install
 ```
 
-3. **Start the Development Server**:
+---
+
+### ▶️ Run the App
+
 ```bash
 npm run dev
 ```
 
-4. **Boot up:** Open your browser and navigate automatically to `http://localhost:5173`. You will instantly be faced with the protective Login layer. Click the Profile box, swap to an `Admin` or `Viewer` payload, and hit the arrow to enter the app!
+Visit: **[http://localhost:5173](http://localhost:5173)**
 
 ---
 
-## 📂 Project Architecture
+### 🔑 How to Use
 
-```plaintext
-/src
-  /components      # Reusable functional UI components (Modals, Headers, Sidebar)
-  /constants       # Global configuration files (Theme tokens)
-  /context         # Global lightweight hooks (ThemeContext)
-  /pages           # Core Page Views (Login, Overview, Transactions, Access)
-  /store           # Redux logic slices (`userSlice.js`, `transactionsSlice.js`)
-  App.jsx          # Protected React Router constraints
-  main.jsx         # DOM Redux wrapped Injection layer
-  index.css        # Core custom Glassmorphic utilities and CSS overwrites
+1. Select a profile (Admin / Viewer)
+2. Click the arrow to authenticate
+3. Explore dashboard features based on role
+
+---
+
+## 📁 Project Structure
+
+```bash
+src/
+│
+├── components/      # Reusable UI (Sidebar, Modals, Header)
+├── constants/       # Theme + config tokens
+├── context/         # Theme context (Dark/Light)
+├── pages/           # Core views (Login, Dashboard, etc.)
+├── store/           # Redux slices
+│   ├── userSlice.js
+│   └── transactionsSlice.js
+│
+├── App.jsx          # Route protection logic
+├── main.jsx         # App entry point
+└── index.css        # Global styles + glassmorphism
 ```
 
 ---
 
-<br>
+## 🚀 Highlights
+
+* ⚡ Lightning-fast dev experience with **Vite HMR**
+* 🧠 Clean state architecture with Redux slices
+* 📊 Real-world fintech UX simulation
+* 🎯 Production-style UI polish
+
+---
 <p align="center">
-  <i>Developed dynamically scaling mobile-first principles with 💙.</i>
+  Built with precision, performance, and 💙
 </p>
+
+---
+
+If you want, I can also:
+
+* Add **badges (build, license, tech stack)**
+* Create a **GIF demo section (very impactful for recruiters)**
+* Or optimize this specifically for **resume / portfolio visibility**
