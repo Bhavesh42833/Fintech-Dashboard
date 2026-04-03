@@ -72,16 +72,16 @@ export default function Access() {
                       </button>
                       
                       {openMenuId === user.id && (
-                        <div className="absolute right-0 top-full mt-2 bg-white dark:bg-[#1c2029] shadow-xl rounded-lg py-1 w-32 z-50 animate-fadeIn border border-[#e5eeff] dark:border-[#21262f] overflow-hidden">
+                        <div className="absolute right-0 top-full mt-2 bg-white dark:bg-[#1c2029] shadow-xl rounded-lg py-2 px-2 w-40 h-39 z-50 animate-fadeIn border border-[#e5eeff] dark:border-[#21262f] overflow-hidden">
                           <button
                             onClick={(e) => { e.stopPropagation(); setEditingUser(user); setIsModalOpen(true); setOpenMenuId(null); }}
-                            className="w-full text-left px-4 py-2 hover:bg-[#eff4ff] dark:hover:bg-[#10131b] text-sm font-bold text-[#0b1c30] dark:text-white transition-colors flex items-center gap-2"
+                            className="w-full text-left rounded-lg px-4 py-2 hover:bg-[#eff4ff] dark:hover:bg-[#10131b] text-sm font-bold text-[#0b1c30] dark:text-white transition-colors flex items-center gap-2"
                           >
                             <span className="material-symbols-outlined text-[16px]">edit</span> Edit
                           </button>
                           <button
                            onClick={(e) => handleDelete(e, user.id)}
-                            className="w-full text-left px-4 py-2 hover:bg-[#ffdad6] dark:hover:bg-[#a70138]/20 text-sm font-bold text-[#ba1a1a] dark:text-[#ffb2b9] transition-colors flex items-center gap-2"
+                            className="w-full text-left rounded-lg px-4 py-2 hover:bg-[#ffdad6] dark:hover:bg-[#a70138]/20 text-sm font-bold text-[#ba1a1a] dark:text-[#ffb2b9] transition-colors flex items-center gap-2"
                           >
                             <span className="material-symbols-outlined text-[16px]">delete</span> Delete
                           </button>

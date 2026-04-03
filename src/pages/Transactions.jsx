@@ -309,16 +309,16 @@ export default function Transactions() {
 
                       {/* Dropdown Menu */}
                       {openMenuId === tx.id && (
-                        <div className="absolute left-6 top-10 bg-white dark:bg-[#1c2029] shadow-xl rounded-xl py-2 w-32 z-50 animate-fadeIn border border-[#e5eeff] dark:border-[#21262f]">
+                        <div className="absolute left-6 top-10 bg-white dark:bg-[#1c2029] shadow-xl rounded-lg py-2 px-2 w-40 h-34 z-50 animate-fadeIn border border-[#e5eeff] dark:border-[#21262f]">
                           <button
                             onClick={(e) => handleEditClick(e, tx)}
-                            className="w-full text-left px-4 py-2 hover:bg-[#eff4ff] dark:hover:bg-[#10131b] text-sm font-bold text-[#0b1c30] dark:text-white transition-colors flex items-center gap-2"
+                            className="w-full rounded-lg text-left px-4 py-2 hover:bg-[#eff4ff] dark:hover:bg-[#10131b] text-sm font-bold text-[#0b1c30] dark:text-white transition-colors flex items-center gap-2"
                           >
                             <span className="material-symbols-outlined text-[16px]">edit</span> Edit
                           </button>
                           <button
                             onClick={(e) => handleDeleteClick(e, tx.id)}
-                            className="w-full text-left px-4 py-2 hover:bg-[#ffdad6] dark:hover:bg-[#a70138]/20 text-sm font-bold text-[#ba1a1a] dark:text-[#ffb2b9] transition-colors flex items-center gap-2"
+                            className="w-full text-left rounded-lg px-4 py-2 hover:bg-[#ffdad6] dark:hover:bg-[#a70138]/20 text-sm font-bold text-[#ba1a1a] dark:text-[#ffb2b9] transition-colors flex items-center gap-2"
                           >
                             <span className="material-symbols-outlined text-[16px]">delete</span> Delete
                           </button>
