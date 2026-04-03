@@ -18,7 +18,10 @@ export default function App() {
         <Routes>
           {/* Conditional Route Guarding */}
           {!isAuthenticated ? (
-            <Route path="*" element={<Login />} />
+            <Route>
+            <Route path="/login" element={<Login />} />
+            <Route path="*" element={<Navigate to="/login" />} />
+            </Route>
           ) : (
             <Route element={<Layout />}>
               <Route path="/" element={<Overview />} />
